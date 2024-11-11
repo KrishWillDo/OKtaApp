@@ -2,13 +2,13 @@
     ViewData["Title"] = "Home Page";
 }
 
-<h1>Welcome</h1>
 <p>
     @if (User.Identity.IsAuthenticated)
     {
-        <form asp-controller="Account" asp-action="Logout" method="post">
-            <button type="submit">Logout</button>
-        </form>
+
+        <h1>Welcome @ViewBag.UserDetail</h1>
+
+
     }
     else
     {
